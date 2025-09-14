@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahima Sood | NYC UGC Creator | 300+ Brand Collaborations</title>
+    <meta name="description" content="Discover Mahima Sood, NYC-based UGC creator with an M.S. in Social Media & Mobile Marketing from Pace University. Trusted by 300+ brands worldwide for unique, on-time, and impactful content.">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        html {
+            overflow-x: hidden;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #D4A574 0%, #B8956A 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #D4A574 0%, #B8956A 100%);
+        }
+        .nude-bg {
+            background-color: #F5F1EB;
+        }
+        .nude-accent {
+            background-color: #E8DDD4;
+        }
+        .nude-text {
+            color: #8B7355;
+        }
+        .nude-dark {
+            color: #6B5B47;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .elegant-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #D4A574;
+            position: fixed;
+            pointer-events: none;
+            mix-blend-mode: difference;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+
+        
+        /* Falling Flower Petals Animation */
+        .petals-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        /* Responsive adjustments for mobile */
+        @media (max-width: 768px) {
+            .petals-container {
+                z-index: 10; /* Higher z-index on mobile for visibility */
+            }
+            .petal {
+                opacity: 0.7; /* Slightly more transparent on mobile */
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .petal {
+                animation: none;
+                display: none;
+            }
+        }
+        
+        .petal {
+            position: absolute;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        
+        .petal::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50% 0 50% 0;
+            transform: rotate(45deg);
+        }
+        
+        .petal-pink::before {
+            background: linear-gradient(45deg, #FFB6C1, #FFC0CB);
+            box-shadow: 0 2px 4px rgba(255, 182, 193, 0.3);
+        }
+        
+        .petal-rose::before {
+            background: linear-gradient(45deg, #F8BBD9, #E91E63);
+            box-shadow: 0 2px 4px rgba(233, 30, 99, 0.3);
+        }
+        
+        .petal-lavender::before {
+            background: linear-gradient(45deg, #E6E6FA, #DDA0DD);
+            box-shadow: 0 2px 4px rgba(221, 160, 221, 0.3);
+        }
+        
+        .petal-peach::before {
+            background: linear-gradient(45deg, #FFCCCB, #FFB07A);
+            box-shadow: 0 2px 4px rgba(255, 176, 122, 0.3);
+        }
+        
+        .petal-white::before {
+            background: linear-gradient(45deg, #FFFFFF, #F0F8FF);
+            box-shadow: 0 2px 4px rgba(240, 248, 255, 0.4);
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(calc(100vh + 100px)) translateX(var(--drift)) rotate(var(--rotation));
+                opacity: 0;
+            }
+        }
+        
+        @keyframes sway {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(var(--sway-distance));
+            }
+        }
+        
+        /* Enhanced mobile navbar responsiveness */
+        nav {
+            box-sizing: border-box;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        @media (max-width: 640px) {
+            nav > div {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                max-width: 100vw;
+                width: 100vw;
+            }
+            nav .flex {
+                min-width: 0;
+                max-width: 100%;
+                gap: 0.5rem;
+            }
+            nav .flex-shrink-0:first-child {
+                max-width: 45%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav > div {
+                padding-left: 0.625rem;
+                padding-right: 0.625rem;
+                max-width: 100vw;
+                width: 100vw;
+            }
+            nav .flex {
+                gap: 0.375rem;
+            }
+            nav .flex-shrink-0:first-child {
+                max-width: 40%;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            nav > div {
+                padding-left: 0.0625rem;
+                padding-right: 0.0625rem;
+            }
+            nav .flex-shrink-0:first-child {
+                max-width: 40%;
+            }
+            .elegant-text {
+                font-size: 0.875rem;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            nav > div {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            nav .flex-shrink-0:first-child {
+                max-width: 35%;
+            }
+            .elegant-text {
+                font-size: 0.75rem;
+            }
+            #back-to-top {
+                bottom: 0.5rem;
+                right: 0.5rem;
+                padding: 0.375rem;
+            }
+            #back-to-top i {
+                width: 0.875rem;
+                height: 0.875rem;
+            }
+        }
+        
+        /* Back to top button mobile optimization */
+        @media (max-width: 480px) {
+            #back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.75rem;
+            }
+            #back-to-top i {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            #back-to-top {
+                bottom: 0.75rem;
+                right: 0.75rem;
+                padding: 0.625rem;
+            }
+            #back-to-top i {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+        
+        /* Enhanced Hero Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+        
+        .hero-title {
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero-subtitle {
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .hero-description {
+            animation: slideInLeft 1s ease-out 0.6s both;
+        }
+        
+        .hero-buttons {
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+        
+        .hero-image {
+            animation: scaleIn 1s ease-out 0.5s both;
+        }
+        
+        .hero-image-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .hero-button-primary {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #D4A574 0%, #B8956A 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-button-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .hero-button-primary:hover::before {
+            left: 100%;
+        }
+        
+        .hero-button-secondary {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-button-secondary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, #D4A574 0%, #B8956A 100%);
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+        
+        .hero-button-secondary:hover::after {
+            width: 100%;
+        }
+        
+        .hero-button-secondary:hover {
+            color: white;
+            border-color: #D4A574;
+        }
+        
+        .gradient-text-animated {
+            background: linear-gradient(90deg, #D4A574 0%, #B8956A 50%, #D4A574 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        /* Enhanced Hero Title Animations */
+        .hero-title-enhanced {
+            opacity: 1; /* Ensure visibility by default */
+            animation: titleReveal 1.2s ease-out 0.3s forwards;
+        }
+        
+        .hero-title-word {
+            display: inline-block;
+            opacity: 1; /* Ensure visibility by default */
+            transform: translateY(0) rotateX(0deg);
+            animation: wordReveal 0.8s ease-out forwards;
+        }
+        
+        .hero-description-enhanced {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: descriptionSlide 1s ease-out 1.5s forwards;
+        }
+        
+        .hero-description-word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: wordFadeIn 0.6s ease-out forwards;
+        }
+        
+        /* Keyframe Animations */
+        @keyframes titleReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        @keyframes wordReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) rotateX(90deg);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(15px) rotateX(45deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotateX(0deg);
+            }
+        }
+        
+        @keyframes descriptionSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes wordFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% {
+                text-shadow: 0 0 5px rgba(212, 165, 116, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(212, 165, 116, 0.6), 0 0 30px rgba(212, 165, 116, 0.4);
+            }
+        }
+        
+        /* Enhanced gradient animation for "Authentic Storytelling" */
+        .gradient-text-enhanced {
+            background: linear-gradient(45deg, #D4A574 0%, #B8956A 25%, #E6C79C 50%, #B8956A 75%, #D4A574 100%);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: #D4A574; /* Fallback color for better visibility */
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 4s ease-in-out infinite, pulseGlow 2s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Ensure gradient text inherits word reveal animation when combined with hero-title-word */
+        .gradient-text-enhanced.hero-title-word {
+            display: inline-block;
+            opacity: 1; /* Ensure visibility by default */
+            transform: translateY(0) rotateX(0deg);
+            animation: wordReveal 0.8s ease-out forwards, gradientShift 4s ease-in-out infinite 1s, pulseGlow 2s ease-in-out infinite 1s;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        .hero-floating-element {
+            position: absolute;
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .hero-floating-element:nth-child(2) {
+            animation-delay: -1s;
+        }
+        
+        .hero-floating-element:nth-child(3) {
+            animation-delay: -2s;
+        }
+        
+        /* Responsive animations */
+        @media (max-width: 768px) {
+            .hero-title {
+                animation: fadeInUp 0.8s ease-out 0.1s both;
+            }
+            
+            .hero-description {
+                animation: fadeInUp 0.8s ease-out 0.3s both;
+            }
+            
+            .hero-buttons {
+                animation: fadeInUp 0.8s ease-out 0.5s both;
+            }
+            
+            .hero-image {
+                animation: scaleIn 0.8s ease-out 0.4s both;
+            }
+            
+            .hero-floating-element {
+                display: none;
+            }
+        }
+        
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .hero-title,
+            .hero-subtitle,
+            .hero-description,
+            .hero-buttons,
+            .hero-image,
+            .hero-image-float,
+            .hero-floating-element,
+            .gradient-text-animated {
+                animation: none;
+            }
+            
+            .hero-button-primary::before,
+            .hero-button-secondary::after {
+                transition: none;
+            }
+        }
+        
+        /* Hero section image left margin for desktop and tablet */
+        @media (min-width: 768px) {
+            .hero-image-container {
+                margin-left: 2rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-image-container {
+                margin-left: 3rem;
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .hero-image-container {
+                margin-left: 4rem;
+            }
+        }
+        
+        /* Hero section buttons equal width */
+        .hero-button {
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        /* iPad and tablet button positioning */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .hero-buttons-container {
+                justify-content: center;
+                margin-top: 2.5rem;
+                gap: 1.5rem;
+            }
+            .hero-button {
+                min-width: 220px;
+            }
+            .hero-image-container img {
+                max-height: 500px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-button {
+                min-width: 180px;
+            }
+            
+            /* Center all content on mobile for home, about, and services sections */
+            #home .md\:w-1\/2,
+            #about .md\:w-1\/2,
+            #services .max-w-7xl > *,
+            #home h1,
+            #home p,
+            #about h2,
+            #about p {
+                text-align: center;
+            }
+            
+            #home .hero-buttons-container {
+                justify-content: center;
+            }
+            
+            #about .md\:flex {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            #about .md\:w-1\/2 {
+                 width: 100%;
+                 max-width: 400px;
+             }
+             
+             /* Center contact section heading */
+             #contact h2 {
+                 text-align: center;
+             }
+             
+             /* Center and add margin to Why Brands Choose Me section */
+              .py-16.bg-white .grid > div {
+                  text-align: center;
+                  margin-bottom: 2rem;
+              }
+              
+              .py-16.bg-white .grid > div .w-12 {
+                  margin: 0 auto 1rem auto;
+              }
+             
+             /* Center and add margin to Services section */
+             #services .grid > div {
+                 text-align: center;
+                 margin-bottom: 2rem;
+             }
+             
+             #services .grid > div .w-14 {
+                 margin: 0 auto 1.5rem auto;
+             }
+             
+             #services .grid > div ul {
+                 text-align: left;
+                 max-width: 300px;
+                 margin: 0 auto;
+             }
+         }
+
+         /* Center icons in Why Brands Choose Me section for all devices */
+         .py-16.bg-white .grid > div .w-12 {
+             margin: 0 auto 1rem auto;
+         }
+
+         /* Center icons in Services section for all devices */
+         #services .grid > div .w-14 {
+             margin: 0 auto 1.5rem auto;
+         }
+
+         /* Center only titles in services section, keep descriptions left-aligned */
+         #services .grid > div h3 {
+             text-align: center;
+         }
+
+         #services .grid > div p {
+             text-align: left;
+         }
+
+         /* Testimonials Marquee Animation */
+         @keyframes marquee {
+             0% {
+                 transform: translateX(0);
+             }
+             100% {
+                 transform: translateX(-50%);
+             }
+         }
+         
+         .animate-marquee {
+             animation: marquee 30s linear infinite;
+         }
+         
+         /* Faster testimonials marquee on mobile */
+         @media (max-width: 768px) {
+             .animate-marquee {
+                 animation: marquee 15s linear infinite;
+             }
+         }
+         
+         .animate-marquee:hover {
+             animation-play-state: paused;
+         }
+         
+         .testimonial-card {
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+         
+         .testimonial-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+         }
+         
+         /* Priorpet Logo Hover Color */
+        .priorpet-logo {
+            position: relative;
+        }
+        
+        .priorpet-logo:hover {
+            filter: brightness(0) saturate(100%) invert(13%) sepia(45%) saturate(2076%) hue-rotate(217deg) brightness(95%) contrast(95%) !important;
+        }
+        
+        /* Mobile Phone Video Gallery Styles */
+        .phone-mockup {
+            position: relative;
+            width: 180px;
+            height: 360px;
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            border-radius: 35px;
+            padding: 8px;
+            box-shadow: 
+                0 0 0 2px #333,
+                0 0 0 4px #1a1a1a,
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 2px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .phone-mockup::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            z-index: 10;
+        }
+        
+        .phone-mockup::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            z-index: 10;
+        }
+        
+        .phone-mockup:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 0 0 2px #444,
+                0 0 0 4px #2a2a2a,
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                inset 0 1px 2px rgba(255, 255, 255, 0.15);
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #222;
+        }
+        
+        .video-content {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 28px;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+
+        
+
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+            border-radius: 28px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        @keyframes float-phone {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        
+        .phone-float {
+            animation: float-phone 3s ease-in-out infinite;
+        }
+        
+        .phone-float:nth-child(2) {
+            animation-delay: -0.5s;
+        }
+        
+        .phone-float:nth-child(3) {
+            animation-delay: -1s;
+        }
+        
+        .phone-float:nth-child(4) {
+            animation-delay: -1.5s;
+        }
+        
+        .phone-float:nth-child(5) {
+            animation-delay: -2s;
+        }
+        
+        .phone-float:nth-child(6) {
+            animation-delay: -2.5s;
+        }
+
+        /* Full-screen video modal styles */
+        .fullscreen-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .fullscreen-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .fullscreen-video-container {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+        }
+
+        .fullscreen-video {
+            width: 100%;
+            height: 100%;
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .fullscreen-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10000;
+        }
+
+        .fullscreen-close:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .phone-mockup {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .phone-mockup:hover {
+            transform: scale(1.05);
+        }
+
+
+
+        /* Gallery masonry layout styles */
+        .gallery-masonry {
+            width: 100%;
+            max-width: 100vw;
+        }
+        
+        .gallery-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .flex-1 {
+            flex: 1;
+        }
+        
+        .flex-2 {
+            flex: 2;
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+            min-width: 0;
+            background-color: #f8f9fa;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            object-fit: contain !important;
+            background-color: #f8f9fa;
+            aspect-ratio: 3/4;
+            height: auto;
+        }
+        
+        /* Special handling for landscape image 15.jpg */
+        .gallery-item img[src*="15.jpg"] {
+            object-fit: cover !important;
+            aspect-ratio: 4/3;
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .gallery-row {
+                flex-direction: column;
+                gap: 4px;
+                margin-bottom: 4px;
+            }
+            
+            .gallery-item {
+                flex: none !important;
+            }
+            
+            .gallery-item img {
+                aspect-ratio: 3/4 !important;
+                height: auto !important;
+                object-fit: contain !important;
+            }
+            
+            .gallery-item img[src*="15.jpg"] {
+                object-fit: cover !important;
+                aspect-ratio: 4/3 !important;
+                height: auto !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-row {
+                gap: 2px;
+                margin-bottom: 2px;
+            }
+            
+            .gallery-item img {
+                aspect-ratio: 3/4 !important;
+                height: auto !important;
+                object-fit: contain !important;
+            }
+            
+            .gallery-item img[src*="15.jpg"] {
+                object-fit: cover !important;
+                aspect-ratio: 4/3 !important;
+                height: auto !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-btn {
+                width: 40px;
+                height: 40px;
+            }
+            
+
+        }
+        
+        /* Marquee Animation Styles */
+        .marquee-row {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        
+        .marquee-content {
+            display: inline-flex;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            width: calc(200% + 1.5rem); /* Ensure enough width for seamless loop */
+        }
+        
+        .marquee-left {
+            animation: scrollLeft 60s linear infinite;
+        }
+        
+        .marquee-right {
+            animation: scrollRight 60s linear infinite;
+        }
+        
+        /* Faster marquee animations on mobile */
+        @media (max-width: 768px) {
+            .marquee-left {
+                animation: scrollLeft 30s linear infinite;
+            }
+            
+            .marquee-right {
+                animation: scrollRight 30s linear infinite;
+            }
+        }
+        
+        @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        @keyframes scrollRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        
+        .marquee-item {
+            flex-shrink: 0;
+            margin-right: 0.75rem;
+            width: 200px;
+            height: 250px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .marquee-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .marquee-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Active navigation styles */
+        .nav-link.active {
+            color: #92400e !important;
+            background-color: rgba(217, 119, 6, 0.1);
+            font-weight: 600;
+        }
+        
+        .nav-link-mobile.active {
+            background-color: rgba(217, 119, 6, 0.1) !important;
+            color: #92400e !important;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body class="nude-bg text-gray-800">
+
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor hidden md:block"></div>
+
+    <!-- Falling Flower Petals -->
+    <div class="petals-container" id="petals-container"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-screen max-w-[100vw] bg-white/95 backdrop-blur-sm shadow-sm z-40 overflow-hidden" data-aos="fade-down">
+        <div class="w-full max-w-[100vw] mx-auto px-1 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center gap-0 sm:gap-2 w-full max-w-full">
+                <div class="flex-shrink-0 flex items-center min-w-0 overflow-hidden max-w-[45%] sm:max-w-none ml-2 sm:ml-4">
+                    <span class="text-lg sm:text-xl md:text-2xl font-bold gradient-text elegant-text whitespace-nowrap truncate">Mahima Sood</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium elegant-text nude-text hover:text-amber-800 transition">Home</a>
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium elegant-text nude-text hover:text-amber-800 transition">About</a>
+                        <a href="#services" class="nav-link px-3 py-2 rounded-md text-sm font-medium elegant-text nude-text hover:text-amber-800 transition">Services</a>
+                        <a href="#portfolio" class="nav-link px-3 py-2 rounded-md text-sm font-medium elegant-text nude-text hover:text-amber-800 transition">Portfolio</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium elegant-text nude-text hover:text-amber-800 transition">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex-shrink-0 min-w-0">
+                    <button id="menu-toggle" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2 sm:p-3 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                        <i data-feather="menu" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg rounded-b-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium elegant-text hover:bg-gray-100">Home</a>
+                <a href="#about" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium elegant-text hover:bg-gray-100">About</a>
+                <a href="#services" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium elegant-text hover:bg-gray-100">Services</a>
+                <a href="#portfolio" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium elegant-text hover:bg-gray-100">Portfolio</a>
+                <a href="#contact" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium elegant-text gradient-bg text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-white/80 to-white"></div>
+        
+        <!-- Floating Elements -->
+        <div class="hero-floating-element top-20 left-10 w-4 h-4 bg-amber-200 rounded-full opacity-60"></div>
+        <div class="hero-floating-element top-32 right-20 w-6 h-6 bg-orange-200 rounded-full opacity-40"></div>
+        <div class="hero-floating-element bottom-32 left-20 w-3 h-3 bg-amber-300 rounded-full opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2">
+                    <div class="hero-title hero-title-enhanced">
+                        <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+                            <span class="hero-title-word">Bringing</span> <span class="hero-title-word">Brands</span> <span class="hero-title-word">to</span> <span class="hero-title-word">Life</span> <span class="hero-title-word">Through</span> <span class="gradient-text-enhanced hero-title-word">Authentic</span> <span class="gradient-text-enhanced hero-title-word">Storytelling</span>
+                        </h1>
+                    </div>
+                    <div class="hero-description hero-description-enhanced">
+                        <p id="hero-description" class="text-lg md:text-xl text-gray-600 mb-8">
+                            <span class="hero-description-word">I'm</span> <span class="hero-description-word font-semibold text-amber-700">Mahima</span> <span class="hero-description-word font-semibold text-amber-700">Sood</span><span class="hero-description-word">,</span> <span class="hero-description-word">a</span> <span class="hero-description-word">NYC-based</span> <span class="hero-description-word">UGC</span> <span class="hero-description-word">creator</span> <span class="hero-description-word">and</span> <span class="hero-description-word">social</span> <span class="hero-description-word">media</span> <span class="hero-description-word">strategist.</span> <span class="hero-description-word">With</span> <span class="hero-description-word">an</span> <span class="hero-description-word">M.S.</span> <span class="hero-description-word">in</span> <span class="hero-description-word">Social</span> <span class="hero-description-word">Media</span> <span class="hero-description-word">&</span> <span class="hero-description-word">Mobile</span> <span class="hero-description-word">Marketing</span> <span class="hero-description-word">from</span> <span class="hero-description-word">Pace</span> <span class="hero-description-word">University</span> <span class="hero-description-word">and</span> <span class="hero-description-word font-semibold text-amber-700">300+</span> <span class="hero-description-word font-semibold text-amber-700">brand</span> <span class="hero-description-word font-semibold text-amber-700">collaborations</span><span class="hero-description-word">,</span> <span class="hero-description-word">I</span> <span class="hero-description-word">specialize</span> <span class="hero-description-word">in</span> <span class="hero-description-word">content</span> <span class="hero-description-word">that</span> <span class="hero-description-word">connects,</span> <span class="hero-description-word">inspires,</span> <span class="hero-description-word">and</span> <span class="hero-description-word">converts.</span>
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 hero-buttons-container hero-buttons">
+                        <a href="#contact" class="hero-button hero-button-primary px-8 py-3 text-white rounded-full font-medium hover:shadow-xl transition duration-300 transform hover:scale-105 hover:-translate-y-1">
+                            Work With Me
+                        </a>
+                        <a href="#portfolio" class="hero-button hero-button-secondary px-8 py-3 bg-white nude-text border border-amber-700 rounded-full font-medium transition duration-300 transform hover:scale-105 hover:-translate-y-1">
+                            View My Portfolio
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0 hero-image-container">
+                    <div class="relative max-w-md mx-auto hero-image">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-amber-200 to-orange-200 rounded-2xl blur opacity-60 hero-image-float"></div>
+                        <div class="absolute -inset-2 bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl opacity-30"></div>
+                        <img src="images/profile.jpg" alt="Mahima Sood" class="relative rounded-2xl w-full h-auto shadow-2xl max-h-96 object-cover object-top hero-image-float transform transition duration-500 hover:scale-105">
+                        
+                        <!-- Decorative elements around image -->
+                        <div class="absolute -top-4 -right-4 w-8 h-8 bg-amber-300 rounded-full opacity-70 animate-pulse"></div>
+                        <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-orange-300 rounded-full opacity-60 animate-pulse" style="animation-delay: 1s;"></div>
+                        <div class="absolute top-1/2 -left-6 w-4 h-4 bg-amber-200 rounded-full opacity-50 animate-pulse" style="animation-delay: 2s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Why Brands Choose Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="nude-accent p-6 rounded-xl card-hover transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="film" class="text-white w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 nude-dark">UGC That Converts</h3>
+                    <p class="nude-text">Engaging, relatable, and authentic content tailored for your audience.</p>
+                </div>
+                <div class="nude-accent p-6 rounded-xl card-hover transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="award" class="text-white w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 nude-dark">Proven Trust</h3>
+                    <p class="nude-text">300+ brands worldwide already trust me with their campaigns.</p>
+                </div>
+                <div class="nude-accent p-6 rounded-xl card-hover transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="clock" class="text-white w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 nude-dark">On-Time Delivery</h3>
+                    <p class="nude-text">Content creation that meets deadlines without compromising quality.</p>
+                </div>
+                <div class="nude-accent p-6 rounded-xl card-hover transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="globe" class="text-white w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 nude-dark">Global Vision</h3>
+                    <p class="nude-text">NYC-based with a global reach in influencer and brand collaborations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Marquee Row - Above About -->
+    <section class="py-8 bg-white overflow-hidden">
+        <div class="marquee-row">
+            <div class="marquee-content marquee-left">
+                <div class="marquee-item">
+                    <img src="images/gallery/1.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/2.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/3.jpg" alt="Gallery Image 3">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/4.jpg" alt="Gallery Image 4">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/5.jpg" alt="Gallery Image 5">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/6.jpg" alt="Gallery Image 6">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/7.jpg" alt="Gallery Image 7">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/8.jpg" alt="Gallery Image 8">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/9.jpg" alt="Gallery Image 9">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/10.jpg" alt="Gallery Image 10">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-item">
+                    <img src="images/gallery/1.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/2.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/3.jpg" alt="Gallery Image 3">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/4.jpg" alt="Gallery Image 4">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/5.jpg" alt="Gallery Image 5">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/6.jpg" alt="Gallery Image 6">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/7.jpg" alt="Gallery Image 7">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/8.jpg" alt="Gallery Image 8">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/9.jpg" alt="Gallery Image 9">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/10.jpg" alt="Gallery Image 10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 nude-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center gap-12">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <div class="relative max-w-md mx-auto">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-amber-200 to-orange-200 rounded-2xl blur opacity-60"></div>
+                        <img src="images/profile2.jpg" alt="Mahima Sood" class="relative rounded-2xl w-full h-auto shadow-2xl max-h-96 object-cover object-top">
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-6 nude-dark">Who I Am & What I Stand For</h2>
+                    <p class="nude-text mb-4">
+                        Hi, I'm Mahima Sood, a passionate content creator and storyteller based in New York City. I hold a Master's degree in Social Media & Mobile Marketing (M.S.) from Pace University, New York, where I honed my skills in digital storytelling, brand strategy, and audience engagement.
+                    </p>
+                    <p class="nude-text mb-4">
+                        In just a few years, I've proudly partnered with over 300 brands across lifestyle, beauty, wellness, and tech — creating user-generated content that is unique, original, and always delivered on time.
+                    </p>
+                    <p class="nude-text">
+                        At my core, I believe content should not just "look good," but also build trust and spark real conversations. That's why every piece I create is infused with creativity, strategy, and authenticity.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-flex items-center px-6 py-3 gradient-bg text-white rounded-full font-medium hover:shadow-lg transition duration-300">
+                            Let's Connect
+                            <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Marquee Row - Below About -->
+    <section class="py-8 bg-white overflow-hidden">
+        <div class="marquee-row">
+            <div class="marquee-content marquee-right">
+                <div class="marquee-item">
+                    <img src="images/gallery/11.jpg" alt="Gallery Image 11">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/12.jpg" alt="Gallery Image 12">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/13.jpg" alt="Gallery Image 13">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/14.jpg" alt="Gallery Image 14">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/15.jpg" alt="Gallery Image 15">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/16.jpg" alt="Gallery Image 16">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/17.jpg" alt="Gallery Image 17">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/18.jpg" alt="Gallery Image 18">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/19.jpg" alt="Gallery Image 19">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/20.jpg" alt="Gallery Image 20">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/21.jpg" alt="Gallery Image 21">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-item">
+                    <img src="images/gallery/11.jpg" alt="Gallery Image 11">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/12.jpg" alt="Gallery Image 12">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/13.jpg" alt="Gallery Image 13">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/14.jpg" alt="Gallery Image 14">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/15.jpg" alt="Gallery Image 15">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/16.jpg" alt="Gallery Image 16">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/17.jpg" alt="Gallery Image 17">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/18.jpg" alt="Gallery Image 18">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/19.jpg" alt="Gallery Image 19">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/20.jpg" alt="Gallery Image 20">
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery/21.jpg" alt="Gallery Image 21">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 nude-dark" data-aos="fade-up">How I Help Brands Shine</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="nude-accent p-8 rounded-2xl card-hover transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="smartphone" class="text-white w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 nude-dark">UGC Content Creation</h3>
+                    <p class="nude-text mb-4">High-quality video and photo content designed to boost brand visibility and conversions.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Authentic, relatable content</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Platform-specific optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">High production quality</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nude-accent p-8 rounded-2xl card-hover transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="target" class="text-white w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 nude-dark">Brand Campaign Collaborations</h3>
+                    <p class="nude-text mb-4">End-to-end creative strategy for social media campaigns across Instagram, TikTok, YouTube & Amazon.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Full campaign ideation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Multi-platform execution</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Performance tracking</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nude-accent p-8 rounded-2xl card-hover transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="clipboard" class="text-white w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 nude-dark">Content Strategy Consulting</h3>
+                    <p class="nude-text mb-4">Helping brands align their storytelling with their audience for maximum engagement.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Audience analysis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Content calendar planning</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Engagement optimization</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nude-accent p-8 rounded-2xl card-hover transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="zap" class="text-white w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 nude-dark">Unique, Original Content</h3>
+                    <p class="nude-text mb-4">No templates, no copy-paste. Every deliverable is tailored to reflect your brand's voice.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Custom creative concepts</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Brand-specific storytelling</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-amber-600 mr-2 w-4 h-4"></i>
+                            <span class="nude-text">Distinct visual identity</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 nude-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 nude-dark" data-aos="fade-up">Brands I've Worked With</h2>
+            <p class="text-center nude-text max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                With 300+ collaborations, I've had the privilege to work with global names and emerging startups alike. Each project has been a chance to merge creativity with strategy and deliver measurable impact.
+            </p>
+            
+            <!-- Brand Categories -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12" data-aos="fade-up">
+                <!-- Wellness & Beauty -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center nude-dark justify-center">
+                        <i data-feather="heart" class="text-amber-600 mr-2 w-5 h-5"></i>
+                        Wellness & Beauty
+                    </h3>
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="images/brand logos/Wellness & Beauty/Lovve_Beauty.png" alt="Lovve Beauty" class="h-12 object-contain grayscale hover:grayscale-0 transition">
+                        <img src="images/brand logos/Wellness & Beauty/My_Derma_Dream_Logo.webp" alt="My Derma Dream" class="h-12 object-contain grayscale hover:grayscale-0 transition">
+                        <img src="images/brand logos/Wellness & Beauty/formulation_factory.png" alt="Formulation Factory" class="h-12 object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                </div>
+                
+                <!-- Fashion & Lifestyle -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center nude-dark justify-center">
+                        <i data-feather="shopping-bag" class="text-amber-600 mr-2 w-5 h-5"></i>
+                        Fashion & Lifestyle
+                    </h3>
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="images/brand logos/Fashion & Lifestyle/Marc_Anthony_logo.svg" alt="Marc Anthony" class="h-12 object-contain grayscale hover:grayscale-0 transition">
+                        <img src="images/brand logos/Fashion & Lifestyle/RawLoveLogo.png" alt="Raw Love" class="h-12 object-contain grayscale hover:grayscale-0 transition">
+                        <img src="images/brand logos/Fashion & Lifestyle/loriini_logo.png" alt="Loriini" class="h-12 object-contain grayscale hover:grayscale-0 transition filter brightness-50 contrast-150">
+                    </div>
+                </div>
+                
+                <!-- Home & Lifestyle -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center nude-dark justify-center">
+                        <i data-feather="home" class="text-amber-600 mr-2 w-5 h-5"></i>
+                        Home & Lifestyle
+                    </h3>
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="images/brand logos/Home & Lifestyle/BADESOFA_Logo.webp" alt="Bade Sofa" class="h-12 object-contain grayscale hover:grayscale-0 transition">
+                        <img src="images/brand logos/Home & Lifestyle/Gourmia_logo.png" alt="Gourmia" class="h-12 object-contain grayscale hover:grayscale-0 transition">
+                        <img src="images/brand logos/Home & Lifestyle/PriorPet_logo.png" alt="Prior Pet" class="h-12 object-contain grayscale hover:grayscale-0 transition filter brightness-50 contrast-150 priorpet-logo">
+                    </div>
+                </div>
+                
+                <!-- Tech & Innovation -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center nude-dark justify-center">
+                        <i data-feather="cpu" class="text-amber-600 mr-2 w-5 h-5"></i>
+                        Tech & Innovation
+                    </h3>
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="images/brand logos/Tech & Innovation/Cokos_Box_Logo.png" alt="Cokos Box" class="h-12 object-contain grayscale hover:grayscale-0 transition">
+                        <img src="images/brand logos/Tech & Innovation/HUAKA_Logo.png" alt="Huaka" class="h-12 object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video Gallery Section -->
+            <div class="mt-20" data-aos="fade-up">
+                <h3 class="text-3xl font-bold text-center mb-4 nude-dark">Content in Action</h3>
+                <p class="text-center nude-text mb-12 max-w-2xl mx-auto">See how I bring brands to life through engaging video content across different platforms and industries.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 justify-items-center max-w-4xl mx-auto">
+                    <!-- Phone 1 -->
+                    <div class="phone-mockup phone-float" data-aos="fade-up" data-aos-delay="100">
+                        <div class="phone-screen">
+                            <video class="video-content" muted loop autoplay>
+                                <source src="videos/Portfolio/video1.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone 2 -->
+                    <div class="phone-mockup phone-float" data-aos="fade-up" data-aos-delay="200">
+                        <div class="phone-screen">
+                            <video class="video-content" muted loop autoplay>
+                                <source src="videos/Portfolio/video2.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone 3 -->
+                    <div class="phone-mockup phone-float" data-aos="fade-up" data-aos-delay="300">
+                        <div class="phone-screen">
+                            <video class="video-content" muted loop autoplay>
+                                <source src="videos/Portfolio/video3.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone 4 -->
+                    <div class="phone-mockup phone-float" data-aos="fade-up" data-aos-delay="400">
+                        <div class="phone-screen">
+                            <video class="video-content" muted loop autoplay>
+                                <source src="videos/Portfolio/video4.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone 5 -->
+                    <div class="phone-mockup phone-float" data-aos="fade-up" data-aos-delay="500">
+                        <div class="phone-screen">
+                            <video class="video-content" muted loop autoplay>
+                                <source src="videos/Portfolio/video5.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone 6 -->
+                    <div class="phone-mockup phone-float" data-aos="fade-up" data-aos-delay="600">
+                        <div class="phone-screen">
+                            <video class="video-content" muted loop autoplay>
+                                <source src="videos/Portfolio/video6.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Full-screen Video Modal -->
+            <div id="fullscreen-modal" class="fullscreen-modal">
+                <div class="fullscreen-video-container">
+                    <button class="fullscreen-close" id="fullscreen-close">
+                        <i data-feather="x" class="w-5 h-5 text-gray-800"></i>
+                    </button>
+                    <video id="fullscreen-video" class="fullscreen-video" controls>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            
+            <!-- Testimonials Cards Marquee -->
+            <div class="mt-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-center mb-8 nude-dark">What Brands Say About Me</h3>
+                <div class="overflow-hidden relative">
+                    <div class="testimonials-marquee flex gap-6 animate-marquee">
+                        <!-- First set of testimonials -->
+                        <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg w-64 h-96 flex-shrink-0 flex flex-col">
+                            <div class="flex flex-col items-center text-center mb-6">
+                                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                    <i data-feather="user" class="text-white w-8 h-8"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold nude-dark text-lg mb-1">Mythic Beauty</h4>
+                                    <p class="text-sm nude-text">Beauty Brand</p>
+                                </div>
+                            </div>
+                            <p class="nude-text italic text-center flex-grow flex items-center justify-center leading-relaxed">"Mahima's content increased our conversions by 40%. Her authentic approach resonates perfectly with our target audience."</p>
+                        </div>
+                        
+                        <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg w-64 h-96 flex-shrink-0 flex flex-col">
+                             <div class="flex flex-col items-center text-center mb-6">
+                                 <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                     <i data-feather="user" class="text-white w-8 h-8"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="font-semibold nude-dark text-lg mb-1">NobleCase</h4>
+                                     <p class="text-sm nude-text">Tech Accessories</p>
+                                 </div>
+                             </div>
+                             <p class="nude-text italic text-center flex-grow flex items-center justify-center leading-relaxed">"The most professional UGC creator we've worked with. Always delivers on time with exceptional quality."</p>
+                         </div>
+                         
+                         <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg w-64 h-96 flex-shrink-0 flex flex-col">
+                             <div class="flex flex-col items-center text-center mb-6">
+                                 <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                     <i data-feather="user" class="text-white w-8 h-8"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="font-semibold nude-dark text-lg mb-1">Silky Moisturizer</h4>
+                                     <p class="text-sm nude-text">Skincare Brand</p>
+                                 </div>
+                             </div>
+                             <p class="nude-text italic text-center flex-grow flex items-center justify-center leading-relaxed">"Her content strategy transformed our social presence. Engagement rates doubled within the first month."</p>
+                         </div>
+                         
+                         <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg w-64 h-96 flex-shrink-0 flex flex-col">
+                             <div class="flex flex-col items-center text-center mb-6">
+                                 <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                     <i data-feather="user" class="text-white w-8 h-8"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="font-semibold nude-dark text-lg mb-1">Wellness Co.</h4>
+                                     <p class="text-sm nude-text">Health & Wellness</p>
+                                 </div>
+                             </div>
+                             <p class="nude-text italic text-center flex-grow flex items-center justify-center leading-relaxed">"Mahima understands our brand voice perfectly. Her content feels authentic and drives real results."</p>
+                         </div>
+                        
+                        <!-- Duplicate set for seamless loop -->
+                         <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg w-64 h-96 flex-shrink-0 flex flex-col">
+                             <div class="flex flex-col items-center text-center mb-6">
+                                 <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                     <i data-feather="user" class="text-white w-8 h-8"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="font-semibold nude-dark text-lg mb-1">Mythic Beauty</h4>
+                                     <p class="text-sm nude-text">Beauty Brand</p>
+                                 </div>
+                             </div>
+                             <p class="nude-text italic text-center flex-grow flex items-center justify-center leading-relaxed">"Mahima's content increased our conversions by 40%. Her authentic approach resonates perfectly with our target audience."</p>
+                         </div>
+                         
+                         <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg w-64 h-96 flex-shrink-0 flex flex-col">
+                             <div class="flex flex-col items-center text-center mb-6">
+                                 <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                     <i data-feather="user" class="text-white w-8 h-8"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="font-semibold nude-dark text-lg mb-1">NobleCase</h4>
+                                     <p class="text-sm nude-text">Tech Accessories</p>
+                                 </div>
+                             </div>
+                             <p class="nude-text italic text-center flex-grow flex items-center justify-center leading-relaxed">"The most professional UGC creator we've worked with. Always delivers on time with exceptional quality."</p>
+                         </div>
+                         
+                         <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg w-64 h-96 flex-shrink-0 flex flex-col">
+                             <div class="flex flex-col items-center text-center mb-6">
+                                 <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                     <i data-feather="user" class="text-white w-8 h-8"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="font-semibold nude-dark text-lg mb-1">Silky Moisturizer</h4>
+                                     <p class="text-sm nude-text">Skincare Brand</p>
+                                 </div>
+                             </div>
+                             <p class="nude-text italic text-center flex-grow flex items-center justify-center leading-relaxed">"Her content strategy transformed our social presence. Engagement rates doubled within the first month."</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center gap-12">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6 nude-dark">Let's Create Something Amazing Together</h2>
+                    <p class="nude-text mb-8">
+                        Whether you're a brand looking for authentic UGC, a campaign partner, or simply curious about my work, I'd love to connect with you.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="mail" class="text-white w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="nude-text text-sm">Email</p>
+                                <a href="mailto:mahimasood@example.com" class="nude-dark hover:text-amber-700">mahimasood@example.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="instagram" class="text-white w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="nude-text text-sm">Instagram</p>
+                                <a href="https://www.instagram.com/the_mahimasood/" target="_blank" class="nude-dark hover:text-amber-700">@the_mahimasood</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4">
+                                <img src="images/threads logo.png" alt="Threads" class="w-5 h-5 object-contain filter brightness-0 invert">
+                            </div>
+                            <div>
+                                <p class="nude-text text-sm">Threads</p>
+                                <a href="https://www.threads.com/@the_mahimasood?xmt=AQF0iqO7_EwQ2SEOWYW7ETPLIf6A4c-jEeZBpZeGPQ4qCx0" target="_blank" class="nude-dark hover:text-amber-700">@the_mahimasood</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4">
+                                <img src="images/amazon logo.png" alt="Amazon" class="w-6 h-6 object-contain filter brightness-0 invert">
+                            </div>
+                            <div>
+                                <p class="nude-text text-sm">Amazon</p>
+                                <a href="https://www.amazon.com/shop/the_mahimasood" target="_blank" class="nude-dark hover:text-amber-700">Shop</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="facebook" class="text-white w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="nude-text text-sm">Facebook</p>
+                                <a href="https://www.facebook.com/mahima.sood1/" target="_blank" class="nude-dark hover:text-amber-700">Mahima Sood</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <form class="nude-accent p-8 rounded-2xl shadow-sm">
+                        <div class="mb-6">
+                            <label for="name" class="block nude-dark font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block nude-dark font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block nude-dark font-medium mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full gradient-bg text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg transition duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex justify-center md:order-2 space-x-6">
+                    <a href="https://www.instagram.com/the_mahimasood/" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://www.threads.com/@the_mahimasood?xmt=AQF0iqO7_EwQ2SEOWYW7ETPLIf6A4c-jEeZBpZeGPQ4qCx0" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <img src="images/threads logo.png" alt="Threads" class="w-6 h-6 object-contain filter brightness-0 invert opacity-60 hover:opacity-100">
+                    </a>
+                    <a href="https://www.amazon.com/shop/the_mahimasood" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <img src="images/amazon logo.png" alt="Amazon" class="w-8 h-8 object-contain filter brightness-0 invert opacity-60 hover:opacity-100">
+                    </a>
+                    <a href="https://www.facebook.com/mahima.sood1/" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="facebook" class="w-6 h-6"></i>
+                    </a>
+                    <a href="mailto:mahimasood@example.com" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="mail" class="w-6 h-6"></i>
+                    </a>
+                </div>
+                <div class="mt-8 md:mt-0 md:order-1">
+                    <p class="text-center md:text-left text-gray-400">
+                        &copy; 2023 Mahima Sood. All rights reserved.
+                    </p>
+                    <p class="text-center md:text-left text-gray-400 mt-2">
+                        Built by <a href="https://www.thefreewebsitewizards.com/" target="_blank" class="text-amber-400 hover:text-amber-300">The Free Website Wizards</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-2 right-2 sm:bottom-4 sm:right-4 md:bottom-8 md:right-8 gradient-bg text-white p-2 sm:p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-30">
+        <i data-feather="arrow-up" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+    </button>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Enhanced Hero Text Animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate title words with staggered delays
+            const titleWords = document.querySelectorAll('.hero-title-word');
+            titleWords.forEach((word, index) => {
+                word.style.animationDelay = `${0.5 + (index * 0.15)}s`;
+            });
+            
+            // Animate description words with staggered delays
+            const descriptionWords = document.querySelectorAll('.hero-description-word');
+            descriptionWords.forEach((word, index) => {
+                word.style.animationDelay = `${2.2 + (index * 0.05)}s`;
+            });
+            
+            // Add intersection observer for scroll-triggered animations
+            const heroSection = document.getElementById('home');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Trigger enhanced animations when hero section is visible
+                        entry.target.classList.add('animate-enhanced');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            if (heroSection) {
+                observer.observe(heroSection);
+            }
+        });
+        
+
+        
+        // Full-screen video functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const phoneMockups = document.querySelectorAll('.phone-mockup');
+            const fullscreenModal = document.getElementById('fullscreen-modal');
+            const fullscreenVideo = document.getElementById('fullscreen-video');
+            const fullscreenClose = document.getElementById('fullscreen-close');
+            
+            // Add click handlers to phone mockups
+            phoneMockups.forEach((phone, index) => {
+                phone.addEventListener('click', function() {
+                    const videoSrc = `videos/Portfolio/video${index + 1}.mp4`;
+                    
+                    // Set video source and enable sound
+                    fullscreenVideo.src = videoSrc;
+                    fullscreenVideo.muted = false;
+                    fullscreenVideo.volume = 0.7;
+                    
+                    // Show modal
+                    fullscreenModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Play video
+                    fullscreenVideo.play().catch(e => {
+                        console.log('Video play failed:', e);
+                    });
+                });
+            });
+            
+            // Close modal function
+            function closeFullscreen() {
+                fullscreenModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                fullscreenVideo.pause();
+                fullscreenVideo.src = '';
+            }
+            
+            // Close button click
+            fullscreenClose.addEventListener('click', closeFullscreen);
+            
+            // Click outside video to close
+            fullscreenModal.addEventListener('click', function(e) {
+                if (e.target === fullscreenModal) {
+                    closeFullscreen();
+                }
+            });
+            
+            // ESC key to close
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && fullscreenModal.classList.contains('active')) {
+                    closeFullscreen();
+                }
+            });
+            
+            // Prevent video container clicks from closing modal
+            document.querySelector('.fullscreen-video-container').addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Custom cursor
+        const cursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, button, input, .card-hover').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('scale-150');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('scale-150');
+            });
+        });
+
+
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Active section highlighting
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link, .nav-link-mobile');
+            
+            let currentSection = '';
+            const scrollPosition = window.scrollY + 100; // Offset for better detection
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            // Remove active class from all links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to current section link
+            if (currentSection) {
+                const activeLinks = document.querySelectorAll(`a[href="#${currentSection}"]`);
+                activeLinks.forEach(link => {
+                    if (link.classList.contains('nav-link') || link.classList.contains('nav-link-mobile')) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+        
+        // Update active link on scroll
+        window.addEventListener('scroll', updateActiveNavLink);
+        
+        // Update active link on page load
+        document.addEventListener('DOMContentLoaded', updateActiveNavLink);
+
+        // Falling Flower Petals Animation
+        function createPetal() {
+            const petalsContainer = document.getElementById('petals-container');
+            const petal = document.createElement('div');
+            
+            // Petal types and colors
+            const petalTypes = ['petal-pink', 'petal-rose', 'petal-lavender', 'petal-peach', 'petal-white'];
+            const randomType = petalTypes[Math.floor(Math.random() * petalTypes.length)];
+            
+            // Random size (16px to 28px)
+             const size = Math.random() * 10 + 12;
+            
+            // Random starting position
+            const startX = Math.random() * window.innerWidth;
+            
+            // Random drift and rotation
+            const drift = (Math.random() - 0.5) * 200; // -100px to 100px drift
+            const rotation = Math.random() * 720; // 0 to 720 degrees
+            
+            // Random fall duration (8 to 15 seconds)
+            const duration = Math.random() * 7 + 8;
+            
+            // Random sway distance
+            const swayDistance = (Math.random() - 0.5) * 60;
+            
+            petal.className = `petal ${randomType}`;
+            petal.style.cssText = `
+                width: ${size}px;
+                height: ${size}px;
+                left: ${startX}px;
+                top: -50px;
+                --drift: ${drift}px;
+                --rotation: ${rotation}deg;
+                --sway-distance: ${swayDistance}px;
+                animation-duration: ${duration}s;
+                animation-delay: ${Math.random() * 2}s;
+            `;
+            
+            petalsContainer.appendChild(petal);
+            
+            // Remove petal after animation completes
+            setTimeout(() => {
+                if (petal.parentNode) {
+                    petal.parentNode.removeChild(petal);
+                }
+            }, (duration + 2) * 1000);
+        }
+        
+        // Create petals at intervals
+        function startPetalAnimation() {
+            // Check if user prefers reduced motion
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                return;
+            }
+            
+            // Adjust for mobile devices
+             const isMobile = window.innerWidth <= 768;
+             const initialPetals = isMobile ? 5 : 5;
+             const petalChance = isMobile ? 0.7 : 0.7;
+             const interval = isMobile ? 800 : 800;
+            
+            // Create initial burst of petals
+            for (let i = 0; i < initialPetals; i++) {
+                setTimeout(() => createPetal(), i * 200);
+            }
+            
+            // Continue creating petals at random intervals
+            setInterval(() => {
+                if (Math.random() < petalChance) {
+                    createPetal();
+                }
+            }, interval);
+        }
+        
+        // Start the animation after page loads
+        setTimeout(startPetalAnimation, 2000);
+        
+        // Pause animation when page is not visible (performance optimization)
+        document.addEventListener('visibilitychange', function() {
+            const petalsContainer = document.getElementById('petals-container');
+            if (document.hidden) {
+                petalsContainer.style.animationPlayState = 'paused';
+            } else {
+                petalsContainer.style.animationPlayState = 'running';
+            }
+        });
+    </script>
+</body>
+</html>
