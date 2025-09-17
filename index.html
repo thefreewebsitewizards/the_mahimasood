@@ -1164,7 +1164,7 @@
                     </div>
                 </div>
                 <div class="md:hidden flex-shrink-0 min-w-0">
-                    <button id="menu-toggle" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2 sm:p-3 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                    <button id="menu-toggle" class="text-pink-600 hover:text-pink-800 focus:outline-none p-2 sm:p-3 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
                         <i data-feather="menu" class="w-6 h-6 sm:w-7 sm:h-7"></i>
                     </button>
                 </div>
@@ -1605,7 +1605,8 @@
                 <h3 class="text-3xl font-bold text-center mb-4 nude-dark">Content in Action</h3>
                 <p class="text-center nude-text mb-12 max-w-2xl mx-auto">See how I bring brands to life through engaging video content across different platforms and industries.</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 justify-items-center max-w-4xl mx-auto">
+                <!-- Desktop Grid Layout -->
+                <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 justify-items-center max-w-4xl mx-auto">
                     <!-- Phone 1 -->
                     <div class="phone-mockup phone-float" data-aos="fade-up" data-aos-delay="100">
                         <div class="phone-screen">
@@ -1665,6 +1666,93 @@
                             <div class="video-overlay"></div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Mobile Carousel Layout -->
+                <div class="md:hidden relative w-full max-w-sm mx-auto" style="min-height: 420px;">
+                    <div class="phone-carousel-container overflow-hidden" style="height: 420px; width: 100%; display: flex; align-items: center;">
+                        <div class="phone-carousel-track flex transition-transform duration-500 ease-in-out" id="phone-carousel-track" style="height: 100%; width: 100%;">
+                            <!-- Phone 1 -->
+                            <div class="phone-carousel-slide flex-shrink-0 w-full flex justify-center items-center" style="height: 100%;">
+                                <div class="phone-mockup phone-float" style="transform: scale(0.9);">
+                                    <div class="phone-screen">
+                                        <video class="video-content" muted loop autoplay>
+                                            <source src="videos/Portfolio/video1.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="video-overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone 2 -->
+                            <div class="phone-carousel-slide flex-shrink-0 w-full flex justify-center items-center" style="height: 100%;">
+                                <div class="phone-mockup phone-float" style="transform: scale(0.9);">
+                                    <div class="phone-screen">
+                                        <video class="video-content" muted loop autoplay>
+                                            <source src="videos/Portfolio/video2.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="video-overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone 3 -->
+                            <div class="phone-carousel-slide flex-shrink-0 w-full flex justify-center items-center" style="height: 100%;">
+                                <div class="phone-mockup phone-float" style="transform: scale(0.9);">
+                                    <div class="phone-screen">
+                                        <video class="video-content" muted loop autoplay>
+                                            <source src="videos/Portfolio/video3.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="video-overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone 4 -->
+                            <div class="phone-carousel-slide flex-shrink-0 w-full flex justify-center items-center" style="height: 100%;">
+                                <div class="phone-mockup phone-float" style="transform: scale(0.9);">
+                                    <div class="phone-screen">
+                                        <video class="video-content" muted loop autoplay>
+                                            <source src="videos/Portfolio/video4.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="video-overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone 5 -->
+                            <div class="phone-carousel-slide flex-shrink-0 w-full flex justify-center items-center" style="height: 100%;">
+                                <div class="phone-mockup phone-float" style="transform: scale(0.9);">
+                                    <div class="phone-screen">
+                                        <video class="video-content" muted loop autoplay>
+                                            <source src="videos/Portfolio/video5.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="video-overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone 6 -->
+                            <div class="phone-carousel-slide flex-shrink-0 w-full flex justify-center items-center" style="height: 100%;">
+                                <div class="phone-mockup phone-float" style="transform: scale(0.9);">
+                                    <div class="phone-screen">
+                                        <video class="video-content" muted loop autoplay>
+                                            <source src="videos/Portfolio/video6.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="video-overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Arrows -->
+                    <button class="carousel-nav carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-300 z-10" id="carousel-prev">
+                        <i data-feather="chevron-left" class="w-5 h-5 text-pink-500"></i>
+                    </button>
+                    <button class="carousel-nav carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-300 z-10" id="carousel-next">
+                        <i data-feather="chevron-right" class="w-5 h-5 text-pink-500"></i>
+                    </button>
                 </div>
             </div>
             
@@ -2266,6 +2354,166 @@
             } else {
                 petalsContainer.style.animationPlayState = 'running';
             }
+        });
+        
+        // Mobile Phone Carousel Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselTrack = document.getElementById('phone-carousel-track');
+            const prevButton = document.getElementById('carousel-prev');
+            const nextButton = document.getElementById('carousel-next');
+            const slides = document.querySelectorAll('.phone-carousel-slide');
+            
+            if (!carouselTrack || !prevButton || !nextButton || slides.length === 0) {
+                return; // Exit if carousel elements don't exist
+            }
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Update carousel position
+            function updateCarousel() {
+                const translateX = -currentSlide * 100;
+                carouselTrack.style.transform = `translateX(${translateX}%)`;
+                
+                // Update button states
+                prevButton.style.opacity = currentSlide === 0 ? '0.5' : '1';
+                nextButton.style.opacity = currentSlide === totalSlides - 1 ? '0.5' : '1';
+            }
+            
+            // Next slide
+            function nextSlide() {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateCarousel();
+                }
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateCarousel();
+                }
+            }
+            
+            // Button event listeners
+            nextButton.addEventListener('click', nextSlide);
+            prevButton.addEventListener('click', prevSlide);
+            
+            // Touch/swipe functionality
+             let startX = 0;
+             let endX = 0;
+             let isDragging = false;
+             
+             carouselTrack.addEventListener('touchstart', function(e) {
+                 startX = e.touches[0].clientX;
+                 isDragging = true;
+                 carouselTrack.style.transition = 'none';
+             }, { passive: true });
+             
+             carouselTrack.addEventListener('touchmove', function(e) {
+                 if (!isDragging) return;
+                 endX = e.touches[0].clientX;
+                 const diff = startX - endX;
+                 const currentTransform = -currentSlide * 100;
+                 
+                 // Limit drag based on current position
+                 let dragTransform = currentTransform - (diff / carouselTrack.offsetWidth * 100);
+                 
+                 // Prevent dragging beyond boundaries
+                 if (currentSlide === 0 && diff < 0) {
+                     // At first slide, limit left drag
+                     dragTransform = Math.max(dragTransform, currentTransform - 20);
+                 } else if (currentSlide === totalSlides - 1 && diff > 0) {
+                     // At last slide, limit right drag
+                     dragTransform = Math.min(dragTransform, currentTransform + 20);
+                 }
+                 
+                 carouselTrack.style.transform = `translateX(${dragTransform}%)`;
+             }, { passive: true });
+             
+             carouselTrack.addEventListener('touchend', function(e) {
+                 if (!isDragging) return;
+                 isDragging = false;
+                 carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+                 
+                 const diff = startX - endX;
+                 const threshold = 50; // Minimum swipe distance
+                 
+                 if (Math.abs(diff) > threshold) {
+                     if (diff > 0 && currentSlide < totalSlides - 1) {
+                         // Right swipe (next) - only if not at last slide
+                         nextSlide();
+                     } else if (diff < 0 && currentSlide > 0) {
+                         // Left swipe (prev) - only if not at first slide
+                         prevSlide();
+                     } else {
+                         updateCarousel(); // Snap back if at boundary
+                     }
+                 } else {
+                     updateCarousel(); // Snap back to current slide
+                 }
+             }, { passive: true });
+            
+            // Mouse drag support for desktop testing
+            let isMouseDown = false;
+            
+            carouselTrack.addEventListener('mousedown', function(e) {
+                startX = e.clientX;
+                isMouseDown = true;
+                carouselTrack.style.transition = 'none';
+                carouselTrack.style.cursor = 'grabbing';
+                e.preventDefault();
+            });
+            
+            document.addEventListener('mousemove', function(e) {
+                 if (!isMouseDown) return;
+                 endX = e.clientX;
+                 const diff = startX - endX;
+                 const currentTransform = -currentSlide * 100;
+                 
+                 // Limit drag based on current position
+                 let dragTransform = currentTransform - (diff / carouselTrack.offsetWidth * 100);
+                 
+                 // Prevent dragging beyond boundaries
+                 if (currentSlide === 0 && diff < 0) {
+                     // At first slide, limit left drag
+                     dragTransform = Math.max(dragTransform, currentTransform - 20);
+                 } else if (currentSlide === totalSlides - 1 && diff > 0) {
+                     // At last slide, limit right drag
+                     dragTransform = Math.min(dragTransform, currentTransform + 20);
+                 }
+                 
+                 carouselTrack.style.transform = `translateX(${dragTransform}%)`;
+             });
+             
+             document.addEventListener('mouseup', function(e) {
+                 if (!isMouseDown) return;
+                 isMouseDown = false;
+                 carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+                 carouselTrack.style.cursor = 'grab';
+                 
+                 const diff = startX - endX;
+                 const threshold = 50;
+                 
+                 if (Math.abs(diff) > threshold) {
+                     if (diff > 0 && currentSlide < totalSlides - 1) {
+                         // Right drag (next) - only if not at last slide
+                         nextSlide();
+                     } else if (diff < 0 && currentSlide > 0) {
+                         // Left drag (prev) - only if not at first slide
+                         prevSlide();
+                     } else {
+                         updateCarousel(); // Snap back if at boundary
+                     }
+                 } else {
+                     updateCarousel();
+                 }
+             });
+            
+            // Initialize carousel
+            updateCarousel();
+            carouselTrack.style.cursor = 'grab';
         });
     </script>
 </body>
